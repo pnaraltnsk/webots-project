@@ -1,0 +1,273 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.33255614192182 0.8929132749675185 0.3035000755467039 4.670677662087679
+  position -2.6466936931323124 1.9371100063387456 -0.041125429734269636
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 3 3
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "C:/Users/User/AppData/Local/Programs/Webots/projects/appearances/protos/textures/parquetry/dark_strip_parquetry_occlusion.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+Nao {
+  translation -1.33 0.334 1.03132e-14
+  rotation 1 9.58976e-09 -9.58979e-09 -1.5707953071795862
+  controller "my_controller_dd"
+  bodySlot [
+    Pen {
+      translation 0.03 4.04052e-07 -0.153
+      rotation 1 0 0 1.5708
+      children [
+        Transform {
+          children [
+            DEF PEN Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.24
+                radius 0.004
+              }
+            }
+          ]
+        }
+      ]
+      boundingObject Transform {
+        children [
+          USE PEN
+        ]
+      }
+      physics Physics {
+        density -1
+        mass 0.5
+        centerOfMass [
+          0 0 0
+        ]
+      }
+    }
+    RangeFinder {
+      translation 0.0399999 1.27294e-08 -0.1
+      rotation -0.5199869735048444 0.5199869735048444 0.6776629654707009 -1.950445307179586
+      maxRange 0.5
+    }
+  ]
+}
+DEF Wall1 Solid {
+  translation 0 0.05 1.5
+  children [
+    DEF WALL_GEOMETRY Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 3 0.3 0.02
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE WALL_GEOMETRY
+}
+DEF Wall2 Solid {
+  translation 0 0.05 -1.5
+  children [
+    USE WALL_GEOMETRY
+  ]
+  name "solid(2)"
+  boundingObject USE WALL_GEOMETRY
+}
+DEF Wall3 Solid {
+  translation 1.5 0.05 -0.0017981
+  rotation 0 1 0 -1.565
+  children [
+    USE WALL_GEOMETRY
+  ]
+  name "solid(3)"
+  boundingObject USE WALL_GEOMETRY
+  rotationStep 0.261799
+}
+DEF Wall4 Solid {
+  translation -1.5 0.05 0.00529005
+  rotation 0 1 0 -1.565
+  children [
+    USE WALL_GEOMETRY
+  ]
+  name "solid(4)"
+  boundingObject USE WALL_GEOMETRY
+}
+DEF Box1 Solid {
+  translation -0.69 0.26 0.91
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 0.15 0.15
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+}
+DEF Box2 Solid {
+  translation 0.48 0.26 -0.45
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+  name "solid(5)"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+}
+DEF Box3 Solid {
+  translation 0.48 0.26 0.8
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(8)"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+}
+DEF Box4 Solid {
+  translation 0.48 0.26 -1.26
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(9)"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+}
+DEF Box5 Solid {
+  translation -0.25 0.26 -1.17
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(10)"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+}
+DEF Box6 Solid {
+  translation -0.2 0.26 0.04
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.122 0.12 0.12
+      }
+    }
+  ]
+  name "solid(6)"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+}
+DEF Box7 Solid {
+  translation -0.79 0.26 -0.68
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.3
+      }
+    }
+  ]
+  name "solid(7)"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+    density -1
+    mass 1
+  }
+}
